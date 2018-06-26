@@ -1,0 +1,33 @@
+### Akteure ###
+### <Klassenname>, NAME, NAHRUNGSTYP, ESSTYP, Gewicht, AppetitGrenze ###
+#
+Fische,Bruce,FISCH,VEGITARIER,120,85
+Fische,Hammer,FISCH,VEGITARIER,55,30
+Fische,Hart,FISCH,VEGITARIER,45,25
+#
+Fische,Nemo,FISCH,VEGANER,5,3
+Fische,Merlin,FISCH,VEGANER,8,4
+Fische,Dorie,FISCH,VEGANER,13,9
+#
+Fische,Crush,FISCH,VEGANER,28,19
+Fische,Racker,FISCH,VEGANER,13,7
+#
+Fische,BoeserHai,FISCH,FLEISCHESSER,120,90
+Fische,BoeserHaiZwei,FISCH,FISCHESSER,100,75
+#
+Fische,Kuh,FLEISCH,VEGANER,95,55
+#
+Fische,Mensch,FLEICH,FLEXITARIER,85,45
+#
+#
+#
+### Passive Akteure ###
+### <Klassenname>, Name, NAHRUNGSTYP, Menge, Gewicht ###
+#
+Fische,Seetang,PFLANZE,100,2
+Fische,Algen,PFLANZE,10000,1
+#
+Fische,Muellklein,MUELL,25,5
+Fische,Muellmittel,MUELL,25,25
+Fische,Muellgross,MUELL,25,50
+
