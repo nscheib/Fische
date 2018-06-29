@@ -1,5 +1,10 @@
+//=====================================================================
 
-
+/**
+ * Interface für die Fischklasse
+ * @author Felix Fuhrman, Nick Scheib
+ * @version inProgress
+ */
 public interface Leckerbissen {
 
     Nahrungstyp nahrungstyp = null;
