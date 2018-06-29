@@ -21,6 +21,11 @@ public class TextIO {
             String line;
             while((line = reader.readLine()) != null) {
                 if(line.startsWith("#")) { continue;}
+                else if (line.startsWith("Text:")) {
+                    String[] split = line.split(":");
+                    System.out.println(split[1]);
+                }
+                else if (line.startsWith("~")) { System.out.println("\n"); }
                 else { list.add(line); }
             }
         } finally {
