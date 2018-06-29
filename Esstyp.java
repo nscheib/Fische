@@ -1,29 +1,18 @@
+
 public enum Esstyp {
 
-    VEGANER(true),
-    VEGETARIER(true),
-    FLEXITARIER(true),
-    FISCHESSER(true),
-    FLEISCHESSER(true);
+    VEGANER, VEGETARIER, FLEXITARIER, FISCHESSER, FLEISCHESSER;
 
+    public static boolean akzeptiert(Nahrungstyp nahrungstyp) {
 
-    private Boolean erlaubt;
+        switch(nahrungstyp){
 
-    Esstyp(boolean erlaubt){
-        this.erlaubt = erlaubt;
-    }
-
-
-    public boolean essbar( Nahrungstyp nahrungstyp) {
-
-        switch (nahrungstyp){
-            case PFLANZE: return true;
-            case FLEISCH: return true;
-            case MUELL: return true;
             case FISCH: return true;
-            default: return false;
+            case MUELL: return false;
+            case FLEISCH: return true;
+            case PFLANZE: return true;
+            default: return true;
         }
-
     }
 
 }

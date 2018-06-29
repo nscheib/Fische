@@ -6,11 +6,11 @@ public interface Leckerbissen {
 
     int getGramm();
 
-    boolean getgefressen();
+    boolean getfressen();
 
     boolean istLebendig();
 
     Nahrungstyp getNahrungstyp();
 
-
+    String getName();
 }
