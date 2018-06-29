@@ -1,32 +1,27 @@
-import java.util.EmptyStackException;
+//=====================================================================
 
+/**
+ * Enum mit Konstanten der verschiedenen Esstypen
+ * @author Felix Fuhrman, Nick Scheib
+ * @version inProgress
+ */
 public enum Esstyp {
 
-    VEGANER(true),
-    VEGETARIER(true),
-    FLEXITARIER(true),
-    FISCHESSER(true),
-    FLEISCHESSER(true);
+    VEGANER, VEGETARIER, FLEXITARIER, FISCHESSER, FLEISCHESSER;
 
-
-    private Boolean erlaubt;
-
-    Esstyp(boolean erlaubt){
-        this.erlaubt = erlaubt;
-    }
-
-
+    /**
+     * Methode soll ueberpruefen, ob der uebergebene Nahrungstyp von dem jeweiligen Esstyp gefressen werden darf.
+     * @param nahrungstyp ist eine Konstante des Nahrungstyps
+     * @return true/false, ob das Opfer gegessen werden darf
+     */
     public static boolean akzeptiert(Nahrungstyp nahrungstyp) {
 
-        Esstyp e = Esstyp.FISCHESSER;
-
-
         switch(nahrungstyp){
-
-            case FISCH: return Esstyp.FLEXITARIER.erlaubt;
+            case FISCH: return true;
             case MUELL: return false;
-            case FLEISCH: return Esstyp.FLEXITARIER.erlaubt;
-            case PFLANZE: return Esstyp
+            case FLEISCH: return true;
+            case PFLANZE: return true;
+            default: return true;
         }
     }
 
