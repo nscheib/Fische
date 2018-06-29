@@ -6,7 +6,7 @@ public interface Leckerbissen {
 
     int getGramm();
 
-    boolean getgefressen();
+    boolean getfressen();
 
     boolean istLebendig();
 

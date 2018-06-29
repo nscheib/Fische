@@ -2,19 +2,23 @@
 public class Fische implements Leckerbissen{
 
     private String name;
-    private Nahrungstyp nahrungstyp;
-    private Esstyp esstyp;
-    private int gewicht, appetit;
+    private String  nahrungstyp;
+    private String esstyp;
+    private int gewicht, appetit, menge;
 
-    public Fische(String name, Nahrungstyp nahrungstyp, Esstyp esstyp){
+    public Fische(String name, String nahrungstyp, String esstyp, int gewicht, int appetit){
         this.name = name;
         this.nahrungstyp = nahrungstyp;
         this.esstyp = esstyp;
-    }
-    public Fische(String name, Nahrungstyp nahrungstyp, Esstyp esstyp, int gewicht, int appetit){
-        this(name, nahrungstyp, esstyp);
         this.gewicht = gewicht;
         this.appetit = appetit;
+    }
+
+    public Fische(String name, String nahrungstyp, int menge, int gewicht){
+        this.name = name;
+        this.nahrungstyp = nahrungstyp;
+        this.menge = menge;
+        this.gewicht = gewicht;
     }
 
     @Override
@@ -23,22 +27,25 @@ public class Fische implements Leckerbissen{
     }
 
     @Override
-    public boolean getgefressen() {
+    public boolean getfressen() {
+        if (Esstyp.akzeptiert() == true){}
         return false;
     }
 
     @Override
     public boolean istLebendig() {
-        return true;
+        if(gewicht == 0) return false;
+        else return true;
     }
 
     @Override
-    public Nahrungstyp getNahrungstyp() {
+    public String getNahrungstyp() {
         return nahrungstyp;
     }
 
 
     public Leckerbissen fressen(Leckerbissen beute){
+
         return beute;
     }
 

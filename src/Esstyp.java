@@ -1,3 +1,5 @@
+import java.util.EmptyStackException;
+
 public enum Esstyp {
 
     VEGANER(true),
@@ -13,16 +15,19 @@ public enum Esstyp {
         this.erlaubt = erlaubt;
     }
 
-    public boolean essbar( Nahrungstyp nahrungstyp) {
 
-        switch (nahrungstyp){
-            case PFLANZE: return true;
-            case FLEISCH: return true;
-            case MUELL: return true;
-            case FISCH: return true;
-            default: return false;
+    public static boolean akzeptiert(Nahrungstyp nahrungstyp) {
+
+        Esstyp e = Esstyp.FISCHESSER;
+
+
+        switch(nahrungstyp){
+
+            case FISCH: return Esstyp.FLEXITARIER.erlaubt;
+            case MUELL: return false;
+            case FLEISCH: return Esstyp.FLEXITARIER.erlaubt;
+            case PFLANZE: return Esstyp
         }
-
     }
 
 }
