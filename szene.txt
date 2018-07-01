@@ -1,0 +1,26 @@
+### "Geschichte" welche das Programm verarbeitet.
+~
+Text: (Eine Stimme mit franz. Akzent)
+Text: Tief in der Blauen Lagune...
+~
+Text: Ooooooooohhh... Wer wohnt in 'ner Ananas ganz tief im Meer?
+Text: Spongebob Schwammkopf!
+Text: Saugstark und gelb und porös und zwar sehr...
+Text: Spongebob Schwammkopf!
+Text: Wenn der Sinn nach parzifischem Blödsinn euch steht?
+Text: Spongebob Schwammkopf!
+Text: Dann schwingt euch an Deck und kommt ja nicht zu spät!
+Text: Spongebob Schwammkopf!
+Text: Und jetzte ALLE!!
+Text: Spongebob Schwammkopf!
+Text: Spongebob Schwammkopf!
+Text: Spongebob Schwammkopf!
+Text: Spooongeboooooob Schwammkooooopf!
+~
+Nemo frisst Seetang
+Kuh frisst Bruce
+Racker frisst Nemo
+BoeserHaiZwei frisst Nemo
+BoeserHai frisst Mensch
+Nemo frisst Seetang
+Kuh frisst Muellklein
