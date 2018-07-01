@@ -7,13 +7,21 @@
  */
 public enum Esstyp {
 
-    VEGANER("Pflanze"), VEGETARIER("Pflanze"), FLEXITARIER("Pflanze"), FISCHESSER("Fisch"), FLEISCHESSER("Fleisch");
+    VEGANER(Nahrungstyp.PFLANZE), VEGETARIER(Nahrungstyp.PFLANZE), FLEXITARIER(Nahrungstyp.FISCH, Nahrungstyp.FLEISCH, Nahrungstyp.PFLANZE), FISCHESSER(Nahrungstyp.FISCH), FLEISCHESSER(Nahrungstyp.FLEISCH);
 
-    private String esstyp;
+    private Nahrungstyp nahrungstypEins;
+    private Nahrungstyp nahrungstypZwei;
+    private Nahrungstyp nahrungstypDrei;
 
     // Konstruktor
-    Esstyp(String esstypEins){
-        this.esstyp = esstypEins;
+    Esstyp(Nahrungstyp typEins){
+        nahrungstypEins = typEins;
+    }
+
+    Esstyp(Nahrungstyp typEins, Nahrungstyp typZwei, Nahrungstyp typDrei) {
+        this.nahrungstypEins = typEins;
+        this.nahrungstypZwei = typZwei;
+        this.nahrungstypDrei = typDrei;
     }
 
     /**
@@ -25,9 +33,9 @@ public enum Esstyp {
 
         // Ueberpruefe ob der Inhalt eines Esstyp der passende Part zum Nahrungstyp ist
         for (Esstyp inhalt : Esstyp.values()) {
-            if (esstyp == inhalt) {
-                if (inhalt.esstyp.equalsIgnoreCase(nahrungstyp.toString())) return true;
-            }
+            if (nahrungstyp.equals(esstyp.nahrungstypEins) || nahrungstyp.equals(esstyp.nahrungstypZwei) || nahrungstyp.equals(esstyp.nahrungstypDrei))
+                return true;
+            else return false;
         }
         return false;
     }
